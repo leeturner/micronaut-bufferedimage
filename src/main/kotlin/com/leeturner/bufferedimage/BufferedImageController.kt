@@ -11,7 +11,7 @@ class BufferedImageController {
   // create a controller method that will return a buffered image
   @Get
   @Produces(MediaType.IMAGE_JPEG) // Adjust the media type based on the image format
-  fun loadImage(): ByteArray? {
+  fun loadImage(): ByteArray {
     val imageStream =
         javaClass.getResourceAsStream("/images/astronaut.jpeg")
             ?: error("Image could not be found") // Replace with your image path
